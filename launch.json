@@ -1,0 +1,27 @@
+{
+  "kind": "univ4_hook",
+  "hook": {
+    "contract": "ManumissionHook",
+    "constructorArgs": ["$poolManager"],
+    "permissions": [
+      "afterInitialize",
+      "beforeSwap",
+      "afterSwap",
+      "beforeSwapReturnDelta",
+      "afterSwapReturnDelta"
+    ]
+  },
+  "token": {
+    "contract": "ManumissionToken",
+    "name": "Ransom for Seat 1376",
+    "symbol": "FREE1376",
+    "decimals": 18
+  },
+  "pool": {
+    "pairedCurrency": "0x0000000000000000000000000000000000000000",
+    "fee": 3000,
+    "tickSpacing": 60,
+    "initialPrice": "1"
+  },
+  "notes": "The petition is fiction by the holder. CREATOR (0xDF90937E07c60108B505FE3C542aB782e0A19AE5) is the requester and disclosed owner of Identity.MD seat #1376; the fixed 2.8 ETH payment to that wallet is intended. Flags are 0x10CC. Constructor takes only the chain's PoolManager. Deploy and initialize the intended native-ETH pool atomically, since the first native pool becomes launchPool. Initial price assumes 1 FREE1376 per ETH; confirm this launch choice before deployment. The seat owner must approve the hook to transfer NFT #1376; manumit atomically buries it at DEAD and redeems exactly 2.8 ETH to CREATOR. Fees accrue as native ERC-6909 claims, with excess available for permissionless IMD purchases even before burial. Burns use only the fixed POOL4 or plain ETH/IMD pools, reference guards and fixed batch/cadence limits. Keepers pay gas and receive no tip. Fixed external addresses and their deployed behavior must be checked on the deployment chain. See README.md and docs/OPERATIONS.md. No deployment or live-chain rehearsal has been performed."
+}
